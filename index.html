@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/etch-a-sketch-icon.png" type="image/x-icon">
     <title>Etch a Sketch</title>
 </head>
+
 <body>
-    
+    <div class="main-container">
+        <h1 class="title">Etch a Sketch <img class="icon" src="./images/etch-a-sketch-icon.png" alt=""></h1>
+
+        <p class="instructions">Click or hold down the mouse button on the desired area to start painting and click again to stop.</p>
+
+        <fieldset class="options-menu">
+            <legend>Options</legend>
+            <input type="button" value="Gray scale" class="option">
+            <input type="button" value="Black" class="option">
+            <input type="button" value="Random color" class="option">
+            <input type="button" value="Clear" class="option">
+        </fieldset>
+
+        <fieldset class="grid-menu">
+            <legend>Grid size</legend>
+            <span id="range-value"></span>
+            <input type="range" name="size" id="grid-size" value="16" min="16" max="100">
+            <input type="button" value="OK" id="size-confirmation">
+        </fieldset>
+
+        <div class="grid-container">
+
+        </div>
+    </div>
+
+    <footer>
+        Created by Luis
+    </footer>
+
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
