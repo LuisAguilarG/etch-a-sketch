@@ -1,40 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+/* Default styles - Portrait mode*/
 
 html {
-    background: rgb(2,0,36);
-    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgb(5, 141, 204) 30%);
-    background-attachment: fixed;
+    background: linear-gradient(180deg, #a12fff, #662fff);
+    font-family: "Inter", serif;
+}
+
+
+.global-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100dvh;
+    background-image: url(../images/bg-icon.png), linear-gradient(180deg, #a12fff, #662fff);
+    background-size: 10vw;
+    background-repeat: round;
+    background-blend-mode: soft-light;
 }
 
 .main-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    max-height: fit-content;
     margin: 0 auto;
     width: 90%;
 }
 
 .main-container > .title {
-    display: inline-flex;
-    margin: 1rem;
-    font-size: 8rem;
-    font-family: "Jersey 15", serif;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: end;
+    margin: .2em 0 .2em;
+    font-family: "Jersey 15 Charted", serif;
+    font-size: 11.5vw;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    font-style: italic;
     color: #ffffff;
-    text-shadow: 1rem 1rem 2rem #000000;
+    text-shadow: .2rem .2rem .1rem #000000;
 }
 
-.maing-container .icon {
-    
+.main-container .icon {
+    width: 1.5em;
+    filter: saturate(80%);
 }
 
 .grid-container {
-    width: 80%;
+    flex: 0 0 85%;
     box-shadow: .5em .5em 1em #000000;
     background-color: #ffffff;
 }
@@ -47,5 +69,216 @@ html {
     flex: 1 1 auto;
     aspect-ratio: 1/1;
     background-color: #ffffff;
-    border: .1rem solid #222222;
-}   
+    border: .1rem solid #313131;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.options-menu {
+    display: inline-flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: .35em;
+}
+
+.options-menu,
+.grid-menu {
+    margin: 1em 0;
+    border: .5em ridge;
+    border-radius: .5em;
+    font-size: 6vw;
+}
+
+.options-menu .title,
+.grid-menu .title {
+    text-align: center;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: .1em .1em .1em #000000;
+}
+
+.options-menu .option {
+    font-size: .7em;
+    font-weight: 300;
+    padding: .1em .5em;
+    color: #555555;
+    box-shadow: .15em .15em 0 #323232;
+
+    
+}
+
+.options-menu .option:hover {
+    background-color: #323232;
+    color: #e9e7e7;
+    cursor: pointer;
+}
+
+.grid-menu {
+    display: inline-flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25em;
+}
+
+.grid-menu .range-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 1.5em;
+    font-family: "Jersey 15", serif;
+    font-size: 1.75em;
+    background-color: #202020;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.grid-menu .grid-size {
+    width: 100%;
+}
+
+.grid-menu .size-confirmation {
+    padding: .1em .5em;
+    font-size: .7em;
+    font-weight: 300;
+    color: #555555;
+    box-shadow: .15em .15em 0 #000000;
+}
+
+.grid-menu .size-confirmation:hover {
+    background-color: #323232;
+    color: #e9e7e7;
+    cursor: pointer;
+}
+
+.instructions {
+    flex: 1 1 100%;
+    margin: .5em 0;
+    padding: .5em;
+    text-align: justify;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: #e9e7e7;
+    background-color: #202020;
+    border: .5em ridge #000000; 
+}
+
+.instructions .material-symbols-outlined {
+    font-size: 1.25em;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: .5em 0;
+    font-size: 5vw;
+    background-color: #202020;
+    font-weight: bolder;
+}
+
+footer .github-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(90deg,#662fff, #ffffff);
+    background-size: 200% 200%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: blink 4.5s ease infinite;
+    -z-animation: blink 4.5s ease infinite;
+    -o-animation: blink 4.5s ease infinite;
+    animation: blink 3s alternate-reverse infinite;
+}
+
+.github-profile {
+    width: 10vw;
+    border-radius: 50%;
+    border: .1em solid #662fff;
+}
+
+@keyframes blink {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+
+/* Media queries - Landscape mode*/
+@media screen and (min-aspect-ratio: 1/1) {
+
+    .global-container {
+        background-size: 3vw;
+    }
+
+    .main-container {
+        width: 95%;
+    }
+
+    .main-container > .title {
+        justify-content: flex-start;
+        margin: .2em 0 .2em;
+        font-size: 5vw;
+    }
+
+    .grid-container {
+        flex: 0 1 35%;
+        height: fit-content;
+    }
+
+    .menu-container {
+        flex: 1 1 0;
+        margin-left: 5vw;
+    }
+
+    .options-menu {
+        flex: 1 1 0;
+        margin: 0;
+        gap: 0;
+    }
+
+    .options-menu, .grid-menu {
+        font-size: 3vw;
+    }
+
+    .options-menu, .grid-menu {
+        padding: 0 .75em 0;
+    }
+
+    .grid-menu {
+        flex: 1 1 0;
+        margin: 0;
+    }
+
+    .instructions {
+        flex: 1 1 100%;
+        margin-bottom: auto;
+        font-size: 2vw;
+    }
+
+    footer {
+        margin: 1em 0 0;
+        font-size: 1.5vw;
+    }
+
+    .github-profile {
+        width: 3vw;
+    }
+}

@@ -6,41 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./images/etch-a-sketch-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/color-palette-alt.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=tooltip_2" />
     <title>Etch a Sketch</title>
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
-    <div class="main-container">
-        <h1 class="title">Etch a Sketch <img class="icon" src="./images/etch-a-sketch-icon.png" alt=""></h1>
+    <div class="global-container">
+        <div class="main-container">
+            <h1 class="title"><img class="icon" src="./images/color-palette-alt.png" alt="">Etch a Sketch</h1>
 
-        <p class="instructions">Click or hold down the mouse button on the desired area to start painting and click again to stop.</p>
+            <div class="grid-container">
 
-        <fieldset class="options-menu">
-            <legend>Options</legend>
-            <input type="button" value="Gray scale" class="option">
-            <input type="button" value="Black" class="option">
-            <input type="button" value="Random color" class="option">
-            <input type="button" value="Clear" class="option">
-        </fieldset>
+            </div>
 
-        <fieldset class="grid-menu">
-            <legend>Grid size</legend>
-            <span id="range-value"></span>
-            <input type="range" name="size" id="grid-size" value="16" min="16" max="100">
-            <input type="button" value="OK" id="size-confirmation">
-        </fieldset>
+            <div class="menu-container">
+                <fieldset class="options-menu">
+                    <legend class="title">Options</legend>
+                    <input type="button" value="Black" class="option">
+                    <input type="button" value="Gray scale" class="option">
+                    <input type="button" value="Random color" class="option">
+                    <input type="button" value="Clear" class="option">
+                </fieldset>
 
-        <div class="grid-container">
+                <fieldset class="grid-menu">
+                    <legend class="title">Grid size</legend>
+                    <div class="range-value"></div>
+                    <input type="range" name="size" class="grid-size" value="16" min="16" max="100">
+                    <input type="button" value="Confirm" class="size-confirmation">
+                </fieldset>
 
+                <p class="instructions"><b><span class="material-symbols-outlined">tooltip_2</span> Instructions: </b>click or hold down the mouse button on the desired area to start painting and click again to stop.</p>
+            </div>
         </div>
+
+        <footer>
+            <a class="github-link" href="https://github.com/LuisAguilarG" target="_blank">
+                Created by Luis
+                <img class="github-profile" src="./images/github-profile.png" alt="">
+            </a>
+        </footer>
     </div>
 
-    <footer>
-        Created by Luis
-    </footer>
-
-    <script src="./js/main.js"></script>
+    <audio id="selection-fx" src="./music/selection-fx.mp3"></audio>
 </body>
-
 </html>

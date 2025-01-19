@@ -9,18 +9,23 @@ setInitialConfig();
 
 function setInitialConfig() {
     const optionList =  document.querySelectorAll(".option");
-    const gridSizeRange = document.querySelector("#grid-size");
-    const gridSizeRangeValue = document.querySelector("#range-value");
-    const sizeConfirmation = document.querySelector("#size-confirmation");
+    const gridSizeRange = document.querySelector(".grid-size");
+    const gridSizeRangeValue = document.querySelector(".range-value");
+    const sizeConfirmation = document.querySelector(".size-confirmation");
+    const selectionFX = document.querySelector("#selection-fx");;
 
-    currentMode = "Gray scale";
+    currentMode = "Black";
     currentGridSize = 16;
     paintingEnabled = false;
     gridSizeRangeValue.textContent = currentGridSize;
+    selectionFX.volume = .25;
 
     optionList.forEach((option) => {
+
         if (option.value === "Clear") {
             option.addEventListener("click", () => {
+                selectionFX.play();
+                console.log("Hola");
                 removeCurrentGrid();
                 generateGrid(currentGridSize);
                 gridSizeRange.value = currentGridSize;
@@ -28,12 +33,13 @@ function setInitialConfig() {
             });
         } else {
             option.addEventListener("click", () => {
+                selectionFX.play();
+                console.log("Hola");
                 removeCurrentGrid();
                 generateGrid(currentGridSize);
                 setMode(option.value);
             });
         }
-        
     });
 
     gridSizeRange.addEventListener("input", () => {
@@ -41,6 +47,7 @@ function setInitialConfig() {
     });
 
     sizeConfirmation.addEventListener("click", () => {
+        selectionFX.play();
         currentGridSize = gridSizeRange.value;
         removeCurrentGrid();
         generateGrid(currentGridSize);
