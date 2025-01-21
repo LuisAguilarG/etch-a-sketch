@@ -10,6 +10,7 @@
 html {
     background: linear-gradient(180deg, #a12fff, #662fff);
     font-family: "Inter", serif;
+    cursor: url(../images/mouse-cursor.svg), auto;
 }
 
 
@@ -60,10 +61,6 @@ html {
     width: 80%;
     box-shadow: .5em .5em 1em #000000;
     background-color: #ffffff;
-}
-
-.grid-container:hover {
-    /* cursor: url("../images/"), auto; */
 }
 
 .grid-container .row {
@@ -284,7 +281,7 @@ footer .github-link {
 
     footer {
         margin: 1em 0 0;
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
 
     .github-profile {
