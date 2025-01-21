@@ -26,39 +26,44 @@ html {
 
 .main-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     flex: 1 0 auto;
-    flex-wrap: wrap;
-    align-content: space-evenly;
-    justify-content: center;
-    max-height: fit-content;
     margin: 0 auto;
     width: 90%;
 }
 
-.main-container > .title {
+.top .title {
     display: flex;
-    flex: 1 1 100%;
     justify-content: center;
     align-items: end;
-    margin: .2em 0 .2em;
+    margin: .2em 0 .4em;
     font-family: "Jersey 15 Charted", serif;
-    font-size: 11.5vw;
+    font-size: 13vw;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
     color: #ffffff;
     text-shadow: .2rem .2rem .1rem #000000;
 }
 
-.main-container .icon {
+.title .icon {
     width: 1.5em;
-    filter: saturate(80%);
+    filter: saturate(70%);
+}
+
+.top .title:hover {
+    scale: 1.05;
 }
 
 .grid-container {
-    flex: 0 0 85%;
+    margin: 0 auto;
+    width: 80%;
     box-shadow: .5em .5em 1em #000000;
     background-color: #ffffff;
+}
+
+.grid-container:hover {
+    /* cursor: url("../images/"), auto; */
 }
 
 .grid-container .row {
@@ -72,22 +77,22 @@ html {
     border: .1rem solid #313131;
 }
 
-.menu-container {
+.bottom {
     display: flex;
     flex-wrap: wrap;
+    margin: 1em 0;
 }
 
 .options-menu {
     display: inline-flex;
-    flex: 1 1 0;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: .35em;
+    flex: 1 1 0;
 }
 
 .options-menu,
 .grid-menu {
-    margin: 1em 0;
+    margin: 0;
     border: .5em ridge;
     border-radius: .5em;
     font-size: 6vw;
@@ -104,11 +109,10 @@ html {
 .options-menu .option {
     font-size: .7em;
     font-weight: 300;
+    margin: .25em 0;
     padding: .1em .5em;
     color: #555555;
     box-shadow: .15em .15em 0 #323232;
-
-    
 }
 
 .options-menu .option:hover {
@@ -123,7 +127,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .25em;
 }
 
 .grid-menu .range-value {
@@ -131,9 +134,9 @@ html {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
-    width: 1.5em;
+    padding: .2em;
     font-family: "Jersey 15", serif;
-    font-size: 1.75em;
+    font-size: 2em;
     background-color: #202020;
     color: #ffffff;
     border-radius: 50%;
@@ -141,6 +144,7 @@ html {
 
 .grid-menu .grid-size {
     width: 100%;
+    margin: .1em 0 .75em;
 }
 
 .grid-menu .size-confirmation {
@@ -159,7 +163,7 @@ html {
 
 .instructions {
     flex: 1 1 100%;
-    margin: .5em 0;
+    margin: .5em 0 0;
     padding: .5em;
     text-align: justify;
     font-size: 3.5vw;
@@ -171,7 +175,6 @@ html {
 
 .instructions .material-symbols-outlined {
     font-size: 1.25em;
-
 }
 
 footer {
@@ -184,7 +187,7 @@ footer {
 }
 
 footer .github-link {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: .5em;
@@ -229,47 +232,53 @@ footer .github-link {
     }
 
     .main-container {
+        flex-direction: row;
         width: 95%;
+        gap: 5vw;
     }
 
-    .main-container > .title {
+    .top {
+        flex: 1 1 0;
+    }
+
+    .top .title {
         justify-content: flex-start;
-        margin: .2em 0 .2em;
-        font-size: 5vw;
+        margin: 0 0 .4em;
+        font-size: 4.5vw;
+        white-space: nowrap;
     }
 
     .grid-container {
-        flex: 0 1 35%;
         height: fit-content;
+        width: 100%;
     }
 
-    .menu-container {
-        flex: 1 1 0;
-        margin-left: 5vw;
+    .top, .bottom {
+        align-content: center;
+        margin: 1em 0;
+    }
+
+    .bottom {
+        flex: 2 1 0;
     }
 
     .options-menu {
-        flex: 1 1 0;
         margin: 0;
-        gap: 0;
+    }
+
+    .options-menu .option {
+        margin: .4em 0;
     }
 
     .options-menu, .grid-menu {
         font-size: 3vw;
     }
 
-    .options-menu, .grid-menu {
-        padding: 0 .75em 0;
-    }
-
     .grid-menu {
-        flex: 1 1 0;
         margin: 0;
     }
 
     .instructions {
-        flex: 1 1 100%;
-        margin-bottom: auto;
         font-size: 2vw;
     }
 
